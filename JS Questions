@@ -1,0 +1,113 @@
+//1. Scope of let, cons, var
+function scopeExample() {
+    if (true) {
+      var x = 10;       // Function scoped
+      let y = 20;       // Block scoped
+      const z = 30;     // Block scoped
+    }
+ if (true) {
+    var a = "var re-declared";
+    let b = "let inside block";
+    const c = "const inside block";
+    console.log("Inside block:", a, b, c);
+  }
+
+  console.log("Outside block:", a, b, c);
+}
+variableScopes();
+
+//2. Return the second fruit form an aaray
+const fruits = ["Apple", "Grapes", "Pomegranate", "Banana", "Papaya"];
+
+function getSecondFruit() {
+  return fruits[1]; // Index starts from 0
+}
+
+console.log(getSecondFruit(fruits));
+console.log();
+
+//3. push and pop of an array
+function modifyArray(arr) {
+  arr.push("newElement");
+  arr.pop(); // Removes the element we just added
+  return arr;
+}
+
+const testArr = [1, 2, 3, 4, 5, 9,11,13,15];
+console.log(modifyArray(testArr)); 
+console.log();
+
+
+//4.square each number using map
+const numbers = [1,4,8,9,11,14,15];
+
+function squareNumbers(arr) {
+  return arr.map(num => num ** 2);
+}
+console.log(squareNumbers(numbers));
+console.log();
+
+//5. filter out even numbers using filter()
+function filterOddNumbers(arr) {
+  return arr.filter(num => num % 2 !== 0);
+}
+console.log(filterOddNumbers([1, 2, 3, 4, 7, 9, 14]));
+console.log()
+
+//6. log a gretting using object properties
+const person = {
+  name: "smith",
+  age: 21,
+  occupation: "cricketer"
+};
+
+
+
+function greetPerson(p) {
+console.log(`Hello, my name is ${p.name}, I am ${p.age} years old and I work as a ${p.occupation}.`);
+console.log();
+}
+
+greetPerson(person);
+
+//7.calculate area of a rectangle from object 
+function getRectangleArea(rect) {
+  return rect.width * rect.height;
+}
+console.log(getRectangleArea({ width: 15, height: 10 }));
+console.log();
+
+//8.return key of an object 
+const sampleObject = {
+    name: "Will",
+    age: 45,
+    country: "India",
+};
+
+function getObjectKeys(obj) {
+return Object.keys(obj);
+}
+
+console.log(getObjectKeys(sampleObject));
+console.log();
+
+//9.merge two object using assign
+const obj1 = { a: 1, b: 2 };
+const obj2 = { c: 3, d: 4 };
+
+function mergeObjects(o1, o2) {
+  return Object.assign({}, o1, o2);
+}
+
+console.log(mergeObjects(obj1, obj2));
+console.log();
+
+//10.use reduce to sum of all no.
+const numbersArr = [10, 20, 30, 40];
+
+function sumArray(arr) {
+  return arr.reduce((total, num) => total + num, 0);
+}
+
+console.log(sumArray(numbersArr)); 
+console.log();

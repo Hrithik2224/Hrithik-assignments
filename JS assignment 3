@@ -1,0 +1,109 @@
+// 1. Remove states names starting with vowels 
+console.log("Q1 :") ;
+let states = ["Andhra pradesh" , "assam" ,"Bihar" ,"Goa", "Gujarat", "Odisha","Kerala" ,"Rajasthan"];
+let filteredstates = states.filter(state => !/^[aeiou]/i.test(state));
+console.log  ( filteredstates);
+
+//2. Reverse the word in sentencec
+console.log("Q2.") ;
+let str ='I love my india';
+let reversedSentence = 'str'.split(' ').reverse().join(' ');
+console.log(reversedSentence);
+
+//3. Replace 'INDIA' with 'INDONESIA' using array splice
+console.log("Q3.") ;
+let arr = 'INDIA'
+let strArray = 'str'.split(' ');
+arr.(3,2, '0' ,'N' ,'E' ,'S', 'I', 'A');
+console.log("Q3." , 'newstring');
+
+//4.count vowels and consonants 
+console.log("Q4.") ;
+let text = "javascript is a programming language ." ;
+let vowels = inputstr.match(/[aeiou]/gi)?.length || 0;
+let consonants = inputstr.match(/[bcdfghjklmnpqrstvwxyz]/gi)?.length ||0;
+console.log("Q4: vowels =" , vowels,",consonants=",consonants);
+
+//5. Replace wrong word with correct word
+functioncorrectfn (sentence, wrong, correct); { 
+    return sentence.replace(newRegExp(wrong,'g'), correct);
+    console.log(correctfn("This is wrong sentence with wrong word.", "wrong", "right"));
+
+}
+
+//Q6. Filter number greater than 5
+let inputArr = [1,2,3,9,10,7,5,4,3];
+let filteredArr = inputArr.filter(num => num >5);
+console.log ('Greaterthanfive');
+
+//7. Average score per student 
+const students = [
+    { name: "Ram" , scores:[80, 70, 60] },
+    {name : "Mohan", scores: [80, 70, 90]},
+    {name : "Sai", scores :[60, 70, 80]},
+    {name : "Hemeng", scores :[90, 90, 80, 80]},
+
+];
+let averages = students.map(student => ({
+    name : student.name,
+    average : student. scores.reduce((a,b) => a+b , 0) / student . scores . length 
+}
+));
+console.log (averages);
+
+//8. Repeated sum of digits until single digit number
+     function digitsum (num) ;{
+        while (num > 9){
+            number = num.toString(). split(''). reduce((a,b) => a + +b, 0);
+        }
+        return number;
+    }
+    console.log(digitsum(456));
+
+    //9. count the number of words
+    console.log("Q9.")
+   functionwordCount(paragraph); {
+    return paragraph.trim().split(/\s+/).length;
+   } 
+   console.log(wordcount("This is a test paragraph with some words."));
+
+   //10.Reverse string
+   functionreversestring(str);{
+    return str.split('').reverse().join('');
+    }
+    console.log(reverseString("Hello"));
+
+    //11. student average from subjects
+    let studentData = { student1 : {
+     subject1 :44,
+     subject2 :56,
+     subject3 :87,
+     subject4 :97,
+     subject5 :37   
+    } ,
+    student2 :{
+      subject1 :44,
+     subject2 :56,
+     subject3 :87,
+     subject4 :97,
+     subject5 :37  
+    } ,
+    student3 : {
+      subject1 :44,
+     subject2 :56,
+     subject3 :87,
+     subject4 :97,
+     subject5 :37    
+    }
+}
+let result = {};
+for(let student in'marksdata') {
+    let scores = Object.values('marksdata'[student]);
+    let average = scores.reduce '((a,b) => a+b , 0) / scores.length;
+    result[student] = {average : average};
+}
+    
+
+   
+
+

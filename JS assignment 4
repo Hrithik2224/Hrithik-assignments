@@ -1,0 +1,83 @@
+//1. Dark theme
+const savedTheme = localStorage.getItem('theme');
+const body = document.body;
+cons toggleButton = document.getElementById('theme-toggle');
+
+//Apply saved theme if available
+if (savedtheme){
+    body.classic.add(savedtheme);
+}
+
+//even listener for the theme toggle toggleButton
+toggleButton.addEventListener('click', () =>){
+    //Toggle dark theme class
+    body.classlist.toggle('dark-theme');
+
+    //save the current theme to local localStorage
+    if(body.classlist.contains('dark-theme')) {
+        localStorage.setItem('theme', 'dark-theme');
+    }else {
+        localStorage.setItem('theme', '');
+    }
+}
+
+//2. Div creation
+function createDiv(){
+  const newDiv = document.createElement('div');
+  newDiv.innerHTML = '<H3> This is a dynamically created div !</h3>';
+    newDiv.style.border = '2px solid black';
+    newDiv.style.padding = '20px';
+    newDiv.style.marginTop = '10px';
+    newDiv.style.backgroundcolor = '#f0f0f0';
+    document.getElementById('createDivBtn').addEventListener('click', createDiv);
+  </script>
+</body>
+}
+</body>
+</html>
+
+//3. hide para show
+const para = document.getElementById('para');
+const showBtn = document.getElementById('show-Btn');
+const hideBtn = document.getElementById('hide-Btn');
+const toggleBtn = document.getElementById('toggle-Btn');
+
+hideBtn.addEventListener('click', () => {
+  para.style.display = 'none' ; 
+});
+
+showBtn.addEventListener('click', () => {
+para.style.display = 'block';
+});
+
+toggleBtn.addEventListener('click', => {
+    if(para.style.display === 'none'){
+        para.style.display = 'block';
+    }else {
+        para.style.display = 'none';
+    }
+});
+
+//4.dynamic css
+const box = document.getElementById('box');
+const changecolorBtn = document.getElementById('change-color-Btn');
+const changesizeBtn = document.getElementById(change-size-Btn);
+
+
+changeColorBtn.addEventListenen('click', () => {
+    box.style.backgroundcolor =get randomcolor();
+});
+
+changesizeBtn.addEventListener('click', => {
+    box.style.width = math.floor(math.random() *300)+'px';
+     box.style.height = math.floor(math.random() *300)+'px';
+    
+});
+function getRandomColor(){
+    const colors = ['#FF69B4', '#33CC33' , '#6666CC' , '#CC6633', '#CCCC33'];
+    return colors[math.floor(math,randon () *colors.length) ];
+}
+function getRandomFont(){
+    const fonts = ['arial' 'times news roman ' 'courier new ' 'georgia'];
+    return fonts[math.floor(math.random () *fonts.length)];
+}

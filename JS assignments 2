@@ -1,0 +1,94 @@
+// 1. Display even number from 1 to 100
+console.log("1. even numbers from 1 to 100:");
+for (let i =1; i <=100; i++) {
+    if (i %2 === 0) {
+    console.log(i) ;
+    
+    }
+}
+
+
+// 2. Calculate function to perform +,-,*,/ using switch
+function calculate (num1 , num2 , operation ) {
+    switch (operation ) {
+        case 'add':
+        case '+' :
+           return num1 + num2 ;
+        case 'subtract' :
+        case '-' :
+           return num1 - num2 ;
+        case 'multiply' :
+        case '*' :
+            return num1 * num2 ;
+        case 'divide':
+        case '/' :
+             result = num2  == 0 ? num1 / num2 :"cannot divide by zero" ;
+             break ;
+             result = "invalid operation" ;
+
+
+             
+    }
+
+}
+
+console.log (calculate (10,2, 'add')) ; // output :12
+console.log (calculate(10 ,2, 'subtract')) ; // output :8
+console.log (calculate(10 ,2, 'multiply')) ; // output :20
+console.log (calculate(10 ,2, 'divide')) ;  // output : 5
+
+// 3. Find tax using switch 
+function findtax(salary){
+    let taxAmount ;
+
+    switch (true) {
+        case salary > 0 && salary <= 500000:
+            taxAmount = 0 ;
+            break;
+        case salary > 500000 && salary <= 1000000:
+            taxAmount = 0.10 ;
+            break;
+        case salary > 1000000 && salary <= 1500000 :
+            taxAmount = 0.20 ;
+            break;
+        case salary > 1500000 :
+            taxAmount = 0.30;
+            break;
+        default :
+            taxAmount = "Invalid salary";
+            break;
+
+    }
+    return taxAmount;
+} 
+
+console.log(findTax(400000)) ; // output :0
+console.log(finfTax(600000)) ; // output : 600000
+console.log(findTax(1200000)) ; // output : 240000
+console.log(findTax(2000000)) ; // output : 600000
+
+
+//4. Find sum of product of corresponding digits 
+function sumOfProduct(n1,n2) {
+    let str1 = n1.toString( );
+    let str2 = n2.toString ( );
+    let maxLen = Math.max (str1.length , str2. length);
+    let sum = 0;
+
+    for (let i = 0; i < maxLen; i++) {
+        let digit1 = i < str1. length ? parseInt (str1[str1.length - 1 - i]) :0 ;
+        let digit2 = i < str2. length ? parseInt (str2[str2.length -1 - i]) : 0 ;
+        sum += digit1 * digit2;
+
+
+
+    }
+    return sum;
+}
+
+console.log (sumOfProduct(6,34)) ; // output :24
+console.log (sumOfProduct(123,456)) ; // output :4*6 + 2*5 + 1*4 = 24+10+4=38
+
+
+
+
